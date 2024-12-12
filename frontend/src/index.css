@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Font and Colors */
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif; /* Use Google Fonts or system default */
+  }
+
+  body {
+    background-color: #f8f9fa; /* Light gray for better contrast */
+    color: #1a1a1a; /* Near black for text */
+  }
+}
+
+/* Minimalistic Form Controls */
+@layer components {
+  .form-input {
+    @apply w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  .form-textarea {
+    @apply form-input resize-none;
+  }
+
+  .btn-primary {
+    @apply bg-orange-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-orange-600 transition-all;
+  }
+
+  .btn-secondary {
+    @apply bg-black text-white font-semibold px-4 py-2 rounded-lg hover:bg-gray-900 transition-all;
+  }
+
+  .card {
+    @apply bg-white shadow-md rounded-lg p-4 border border-gray-200;
+  }
+
+  .status-badge {
+    @apply inline-block px-3 py-1 text-sm font-medium rounded-full;
+  }
+
+  .badge-completed {
+    @apply bg-orange-200 text-orange-800;
+  }
+
+  .badge-pending {
+    @apply bg-gray-300 text-gray-700;
+  }
+}
